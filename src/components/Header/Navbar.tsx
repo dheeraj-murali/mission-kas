@@ -1,7 +1,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
-import { Logo } from "./Logo";
+import { Logo } from "../shared/Logo";
 
 const navigation = [
   { name: "Home", href: "#" },
@@ -14,7 +14,7 @@ export const Navbar = () => {
   return (
     <Popover
       as="div"
-      className="bg-teal-900 md:shadow md:shadow-white relative pt-6 px-4 sm:px-6 lg:px-8"
+      className="relative z-10 px-4 pt-6 bg-transparent sm:px-6 lg:px-8"
     >
       <nav
         className="relative flex items-center justify-between"
@@ -26,10 +26,10 @@ export const Navbar = () => {
               <span className="sr-only">Workflow</span>
               <Logo width={180} height={50} type="light" />
             </a>
-            <div className="-mr-2 flex items-center md:hidden">
-              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+            <div className="flex items-center -mr-2 md:hidden">
+              <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
                 <span className="sr-only">Open main menu</span>
-                <MenuAlt1Icon className="h-6 w-6" aria-hidden="true" />
+                <MenuAlt1Icon className="w-6 h-6" aria-hidden="true" />
               </Popover.Button>
             </div>
           </div>
@@ -39,7 +39,7 @@ export const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-white font-medium hover:text-emerald-300 hover:border-b-2"
+              className="font-medium text-white hover:text-emerald-300 hover:border-b-2"
             >
               {item.name}
             </a>
@@ -58,17 +58,17 @@ export const Navbar = () => {
       >
         <Popover.Panel
           focus
-          className="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+          className="absolute inset-x-0 top-0 z-50 p-2 transition origin-top-right transform md:hidden"
         >
-          <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-            <div className="px-5 pt-4 flex items-center justify-between">
+          <div className="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
+            <div className="flex items-center justify-between px-5 pt-4">
               <div>
                 <Logo width={180} height={50} type="dark" />
               </div>
               <div className="-mr-2">
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+                <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
                   <span className="sr-only">Close main menu</span>
-                  <XIcon className="h-6 w-6" aria-hidden="true" />
+                  <XIcon className="w-6 h-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
             </div>
@@ -77,7 +77,7 @@ export const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
                 >
                   {item.name}
                 </a>

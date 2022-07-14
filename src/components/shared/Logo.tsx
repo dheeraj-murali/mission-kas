@@ -1,6 +1,6 @@
 import Image from "next/image";
-import LogoDark from "../../public/Images/logo-dark.svg";
-import LogoLight from "../../public/Images/logo-light.svg";
+import LogoDark from "../../../public/Images/logo-dark.svg";
+import LogoLight from "../../../public/Images/logo-light.svg";
 
 type LogoProps = {
   width?: number;
