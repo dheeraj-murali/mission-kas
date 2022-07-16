@@ -2,7 +2,7 @@ import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@her
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: 'Competitive exams',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: GlobeAltIcon,
@@ -14,13 +14,13 @@ const features = [
     icon: ScaleIcon,
   },
   {
-    name: 'Transfers are instant',
+    name: 'Highly trined professionals',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: LightningBoltIcon,
   },
   {
-    name: 'Mobile notifications',
+    name: 'Online coaching',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: AnnotationIcon,
@@ -30,13 +30,12 @@ const features = [
 export const Feature = () => {
   return (
     <section className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
             A better way to send money
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          </h2>
+          <p className="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
             accusamus quisquam.
           </p>
@@ -47,10 +46,10 @@ export const Feature = () => {
             {features.map((feature) => (
               <div key={feature.name} className="relative">
                 <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <feature.icon className="h-6 w-6" aria-hidden="true" />
+                  <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-md bg-emerald-500">
+                    <feature.icon className="w-6 h-6" aria-hidden="true" />
                   </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
+                  <p className="ml-16 text-lg font-medium leading-6 text-gray-900">{feature.name}</p>
                 </dt>
                 <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
               </div>

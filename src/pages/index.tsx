@@ -4,6 +4,7 @@ import { Hero } from "../components/Hero/Hero";
 import { Navbar } from "../components/Header/Navbar";
 import Image from "next/image";
 import blob from "../../public/images/blob.svg";
+import { Highlight } from "../components/Highlight/Highlight";
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
+        <Highlight />
         <Feature />
       </main>
     </div>
