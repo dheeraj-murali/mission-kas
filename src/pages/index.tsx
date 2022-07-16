@@ -3,7 +3,7 @@ import { Feature } from "../components/Feature";
 import { Hero } from "../components/Hero/Hero";
 import { Navbar } from "../components/Header/Navbar";
 import Image from "next/image";
-import blob from "../../public/images/blob.svg";
+import blob from "../../public/images/blob-bg.svg";
 import { Highlight } from "../components/Highlight/Highlight";
 
 const Home: NextPage = () => {
