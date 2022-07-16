@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         Montserrat: ["Montserrat"],
       },
+      backgroundImage: {
+        'hero': "url('/images/blob-bg.svg')",
+      }
     },
   },
   plugins: [require("@tailwindcss/forms")],
