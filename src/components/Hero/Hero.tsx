@@ -14,7 +14,7 @@ export const Hero = () => {
           .
         </h1>
 
-        <Form />
+        <Form theme="light" />
       </div>
     </section>
   );

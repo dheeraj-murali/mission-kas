@@ -12,6 +12,8 @@ module.exports = {
       },
       backgroundImage: {
         'hero': "url('/images/blob-bg.svg')",
+        'scribble':  "url('/images/scribble1.svg')",
+        'register':  "url('/images/register.svg')",
       }
     },
   },

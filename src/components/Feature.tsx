@@ -29,10 +29,10 @@ const features = [
 
 export const Feature = () => {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-20 bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-extrabold leading-8 tracking-tight sm:text-4xl">
             A better way to send money
           </h2>
           <p className="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">

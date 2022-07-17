@@ -8,7 +8,7 @@ export const Highlight = () => {
         <h2 className="pb-5 text-4xl font-bold tracking-tight">
           Trained by industry professionals.
         </h2>
-        <p>
+        <p className="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt.
         </p>
