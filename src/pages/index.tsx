@@ -10,7 +10,7 @@ import { Footer } from "../components/Footer";
 const Home: NextPage = () => {
   return (
     <div className="text-gray-600">
-      <main className="bg-fixed bg-teal-900 bg-[left_1rem_top_20rem] xl:bg-[right_-45rem_top_-10rem] bg-repeat-space bg-cover bg-hero">
+      <main id="home" className="bg-fixed bg-teal-900 bg-[left_1rem_top_20rem] xl:bg-[right_-45rem_top_-10rem] bg-repeat-space bg-cover bg-hero">
         <Navbar />
         <Hero />
       </main>

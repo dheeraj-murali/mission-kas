@@ -3,7 +3,7 @@ import { prelims, series } from "./data";
 
 export const Programs = () => {
   return (
-    <section className="flex flex-col items-center justify-center px-5 py-20 space-y-10 bg-teal-50">
+    <section id="programs" className="flex flex-col items-center justify-center px-5 py-20 space-y-10 bg-teal-50">
       <h2 className="text-4xl font-bold tracking-tight text-start">
         Upcoming Programs
       </h2>

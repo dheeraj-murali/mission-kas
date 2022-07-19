@@ -2,7 +2,7 @@ import { Form } from "../Form/Form";
 
 export const Register = () => {
   return (
-    <section className="relative">
+    <section id="register" className="relative">
       <div className="lg:bg-scribble bg-[top_-5rem_left_-15rem] bg-no-repeat">
         <div className="lg:bg-scribble bg-[bottom_-10rem_right_-15rem] bg-no-repeat">
           <div className="flex flex-col items-center justify-center px-5 py-20 space-y-10">

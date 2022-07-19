@@ -3,7 +3,7 @@ import teacher from "../../../public/Images/teacher.jpg";
 
 export const Highlight = () => {
   return (
-    <section className="grid grid-cols-1 px-5 py-20 lg:px-10 xl:px-20 lg:grid-cols-2 gap-14 bg-teal-50 place-items-center">
+    <section id="about" className="grid grid-cols-1 px-5 py-20 lg:px-10 xl:px-20 lg:grid-cols-2 gap-14 bg-teal-50 place-items-center">
       <div>
         <h2 className="pb-5 text-4xl font-bold tracking-tight">
           Trained by industry professionals.

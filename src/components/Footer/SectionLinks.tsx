@@ -5,23 +5,23 @@ export const SectionLinks = () => {
         Useful links
       </h6>
       <p className="mb-4">
-        <a href="#!" className="text-gray-600">
-          Pricing
+        <a href="#home" className="text-gray-600">
+          Home
         </a>
       </p>
       <p className="mb-4">
-        <a href="#!" className="text-gray-600">
-          Settings
+        <a href="#about" className="text-gray-600">
+          About
         </a>
       </p>
       <p className="mb-4">
-        <a href="#!" className="text-gray-600">
-          Orders
+        <a href="#programs" className="text-gray-600">
+          Programs
         </a>
       </p>
       <p>
-        <a href="#!" className="text-gray-600">
-          Help
+        <a href="#home" className="text-gray-600">
+          Register
         </a>
       </p>
     </div>
