@@ -5,6 +5,7 @@ import { Navbar } from "../components/Header/Navbar";
 import { Highlight } from "../components/Highlight/Highlight";
 import { Programs } from "../components/Programs/Programs";
 import { Register } from "../components/Register/Register";
+import { Footer } from "../components/Footer/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Feature />
       <Programs />
       <Register />
+      <Footer />
     </div>
   );
 };
