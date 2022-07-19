@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import { Feature } from "../components/Feature";
-import { Hero } from "../components/Hero/Hero";
-import { Navbar } from "../components/Header/Navbar";
-import { Highlight } from "../components/Highlight/Highlight";
-import { Programs } from "../components/Programs/Programs";
-import { Register } from "../components/Register/Register";
-import { Footer } from "../components/Footer/Footer";
+import { Features } from "../components/Features";
+import { Hero } from "../components/Hero";
+import { Navbar } from "../components/Navbar";
+import { Highlight } from "../components/Highlight";
+import { Programs } from "../components/Programs";
+import { Register } from "../components/Register";
+import { Footer } from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <Hero />
       </main>
       <Highlight />
-      <Feature />
+      <Features />
       <Programs />
       <Register />
       <Footer />

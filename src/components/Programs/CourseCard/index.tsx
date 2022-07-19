@@ -1,4 +1,5 @@
-import { QuestionMarkCircleIcon } from "@heroicons/react/outline";
+import { CourseItem } from "./CourseItem";
+import { HelperText } from "./HelperText";
 
 export type CardItem = {
   icon?: React.ReactNode;
@@ -32,27 +33,15 @@ export const CourseCard = (props: CourseCardProps) => {
             key={index}
             className="flex flex-col items-start p-3 text-base font-bold text-white rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-500 hover:bg-emerald-200 hover:text-black hover:bg-none hover:shadow"
           >
-            {item.icon && item.icon}
-            <span className="flex-1 mb-3">{item.text}</span>
-            {item.isPopular && (
-              <span className="inline-flex items-center justify-center px-2 py-0.5 text-xs font-medium text-white bg-teal-900 rounded dark:bg-gray-700 dark:text-gray-400">
-                Popular
-              </span>
-            )}
+            <CourseItem
+              icon={item.icon}
+              text={item.text}
+              isPopular={item.isPopular}
+            />
           </li>
         ))}
       </ul>
-      {helperText && (
-        <div>
-          <a
-            href="#"
-            className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
-          >
-            <QuestionMarkCircleIcon className="w-4 mr-2" />
-            {helperText}
-          </a>
-        </div>
-      )}
+      {helperText && <HelperText text={helperText} />}
     </div>
   );
 };

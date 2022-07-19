@@ -1,6 +1,6 @@
-import { Button } from "./shared/Button";
-import { InfoRadio } from "./shared/InfoRadio";
-import { Input } from "./shared/input";
+import { Button } from "./Button";
+import { InfoRadio } from "./InfoRadio";
+import { Input } from "./input";
 
 const streams = [
   {
