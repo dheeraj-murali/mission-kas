@@ -2,14 +2,20 @@ import { Fragment, useState } from "react";
 import { Popover, RadioGroup, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 
+export type RadioOption = { name: string; description: string };
+
 type InfoRadioProps = {
   theme: "light" | "dark";
-  options: { name: string; description: string }[];
+  label: string;
+  options: RadioOption[];
+  id?: string;
+  name?: string;
+  value: string;
+  onChange: (e: string) => void;
 };
 
 export function InfoRadio(props: InfoRadioProps) {
-  const { theme, options } = props;
-  const [selected, setSelected] = useState(options[0]);
+  const { theme, options, label, onChange, value, id, name } = props;
 
   return (
     <Popover className="relative mb-3">
@@ -18,11 +24,11 @@ export function InfoRadio(props: InfoRadioProps) {
           theme === "light" ? "text-white" : "text-black"
         }`}
       >
-        Your preferred stream
+        {label}
         <Popover.Button
           className={`inline-flex justify-between bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 w-full p-2.5`}
         >
-          <span>{selected.name}</span>
+          <span>{value}</span>
           <ChevronDownIcon
             className="w-5 h-5 ml-2 text-gray-900 transition duration-150 ease-in-out group-hover:text-opacity-80"
             aria-hidden="true"
@@ -41,7 +47,7 @@ export function InfoRadio(props: InfoRadioProps) {
       >
         <Popover.Panel className="absolute z-20 w-full mt-3 transform -translate-x-1/2 bottom-14 left-1/2">
           <div className="w-full rounded-md shadow-xl">
-            <RadioGroup value={selected} onChange={setSelected}>
+            <RadioGroup value={value} onChange={onChange} id={id} name={name}>
               <RadioGroup.Label className="sr-only">
                 KAS stream
               </RadioGroup.Label>
@@ -49,10 +55,14 @@ export function InfoRadio(props: InfoRadioProps) {
                 {options.map((option, index) => (
                   <RadioGroup.Option
                     key={option.name}
-                    value={option}
+                    value={option.name}
                     className={({ active, checked }) =>
                       `
-                    ${(active || checked) ? "bg-gradient-to-tr from-emerald-500 to-teal-500 text-white": "bg-white"}
+                    ${
+                      active || checked
+                        ? "bg-gradient-to-tr from-emerald-500 to-teal-500 text-white"
+                        : "bg-white"
+                    }
                     ${index === 0 ? "rounded-t-md" : ""}
                     ${index === options.length - 1 ? "rounded-b-md" : ""}
                      border border-b-2 flex cursor-pointer px-5 py-4 shadow-md focus:outline-none
@@ -115,5 +125,3 @@ function CheckIcon(props: any) {
     </svg>
   );
 }
-
-
