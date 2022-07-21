@@ -45,7 +45,7 @@ export const Form = (props: FormProps) => {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "from-name": "registration", ...values }),
+        body: encode({ "form-name": "registration", ...values }),
       })
         .then(() => alert("Success!"))
         .catch((error) => alert(error));
