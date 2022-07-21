@@ -3,7 +3,7 @@ import { CardItem } from "./CourseCard";
 export const prelims: CardItem[] = [
   {
     isPopular: true,
-    text: "7 Month Integrated Prelims cum Mains Batch - For College Students",
+    text: "7 Month Integrated Prelims cum Mains Batch",
   },
   {
     text: "7 Month Integrated Prelims cum Mains Batch - For Working Professionals",

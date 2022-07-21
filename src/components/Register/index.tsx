@@ -10,8 +10,8 @@ export const Register = () => {
               Ready to start?
             </h2>
             <p className="max-w-2xl mt-4 text-xl text-gray-500 text-start lg:text-center lg:mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
+              The path to a successful career starts here. Let us strive
+              together to take you there.
             </p>
             <Form theme="dark" />
           </div>

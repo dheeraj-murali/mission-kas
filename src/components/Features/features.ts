@@ -1,33 +1,37 @@
-import {
-  AnnotationIcon,
-  GlobeAltIcon,
-  LightningBoltIcon,
-  ScaleIcon,
-} from "@heroicons/react/outline";
+import { ChartIcon } from "../icons/ChartIcon";
+import { ExpertIcon } from "../icons/ExpertIcon";
+import { RecordIcon } from "../icons/RecordIcon";
+import { StudyMaterial } from "../icons/StudyMaterial";
+import { TeamIcon } from "../icons/TeamIcon";
 
 export const features = [
   {
-    name: "Competitive exams",
+    name: "Prelims test series with tracking and analysis of scores",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: GlobeAltIcon,
+      "Includes practice tests for the examination, Weekly module wise class tests in prelims model and full-length test series before the examination.",
+    icon: ChartIcon,
   },
   {
-    name: "No hidden fees",
+    name: "Helpful Mentorship Circles",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: ScaleIcon,
+      "Classroom coaching is enriched with individual care and during the course, guidance from mentors will be available for doubt clearance, answer writing corrections and prelims and mains strategy preparation",
+    icon: TeamIcon,
   },
   {
-    name: "Highly trined professionals",
+    name: "Expert faculty",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: LightningBoltIcon,
+      "Classes covering the entire syllabus are handled by experienced teachers in the field of competitive exams.",
+    icon: ExpertIcon,
   },
   {
-    name: "Online coaching",
+    name: "Comprehensive and exhaustive study materials",
+    description: "These are always updated and relevant to KAS examination.",
+    icon: StudyMaterial,
+  },
+  {
+    name: "Recorded classes.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: AnnotationIcon,
+      "For any classes that are missed by the student, recorded sessions will be available on our platform.",
+    icon: RecordIcon,
   },
 ];

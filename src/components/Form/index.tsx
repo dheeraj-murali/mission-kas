@@ -52,9 +52,10 @@ export const Form = (props: FormProps) => {
         .then(() => toast.success("Well get back to you soon!!", {
          icon: <MailSendIcon />
         }))
-        .catch((error) => toast.error("Oh no! something went wrong."))
+        .catch(() => toast.error("Oh no! something went wrong."))
         .finally(() => {
           formik.setSubmitting(false);
+          formik.resetForm()
         });
     },
   });

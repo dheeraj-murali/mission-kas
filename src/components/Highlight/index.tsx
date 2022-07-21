@@ -3,14 +3,21 @@ import teacher from "../../../public/Images/teacher.jpg";
 
 export const Highlight = () => {
   return (
-    <section id="about" className="grid grid-cols-1 px-5 py-20 lg:px-10 xl:px-20 lg:grid-cols-2 gap-14 bg-teal-50 place-items-center">
+    <section
+      id="about"
+      className="grid grid-cols-1 px-5 py-20 lg:px-10 xl:px-20 lg:grid-cols-2 gap-14 bg-teal-50 place-items-center"
+    >
       <div>
         <h2 className="pb-5 text-4xl font-bold tracking-tight">
-          Trained by industry professionals.
+          Start your KAS preparation with us.
         </h2>
-        <p className="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt.
+        <p className="max-w-2xl mt-4 text-gray-500 lg:mx-auto">
+          We have established an environment, where the students have access to
+          all that is required to plan for their KAS examination effectively,
+          efficiently and enthusiastically by ensuring them with excellent
+          coaching and the finest study materials. Facilities at Mission KAS are
+          thoroughly attempted and revised so that our students can focus on
+          what really matters in their journey to crack KAS
         </p>
       </div>
 
