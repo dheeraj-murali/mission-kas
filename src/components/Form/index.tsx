@@ -1,4 +1,6 @@
 import { useFormik } from "formik";
+import { toast } from 'react-toastify';
+import { MailSendIcon } from "../icons/MailSendIcon";
 import { Button } from "./Button";
 import { streams } from "./data";
 import { InfoRadio } from "./InfoRadio";
@@ -47,8 +49,13 @@ export const Form = (props: FormProps) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "registration", ...values }),
       })
-        .then(() => alert("Success!"))
-        .catch((error) => alert(error));
+        .then(() => toast.success("Well get back to you soon!!", {
+         icon: <MailSendIcon />
+        }))
+        .catch((error) => toast.error("Oh no! something went wrong."))
+        .finally(() => {
+          formik.setSubmitting(false);
+        });
     },
   });
 
@@ -128,7 +135,7 @@ export const Form = (props: FormProps) => {
             />
 
             <div>
-              <Button>Join us now</Button>
+              <Button loading={formik.isSubmitting}>Join us now</Button>
             </div>
           </form>
         </div>

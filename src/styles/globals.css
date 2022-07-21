@@ -5,9 +5,14 @@
 /* * {
     outline: 1px solid green
 } */
+.Toastify__progress-bar--success {
+    @apply !bg-emerald-500
+  }
 
 @layer base {
   html {
     font-family: Montserrat;
   }
+
+
 }
