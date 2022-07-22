@@ -9,7 +9,7 @@ export const Highlight = () => {
     >
       <div>
         <h2 className="pb-5 text-4xl font-bold tracking-tight">
-          Start your KAS preparation with us.
+          Start your KAS preparation with us
         </h2>
         <p className="max-w-2xl mt-4 text-gray-500 lg:mx-auto">
           We have established an environment, where the students have access to

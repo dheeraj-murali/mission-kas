@@ -18,7 +18,7 @@ export const SocialHeader = () => {
         <a href="https://t.me/missionkasonline" target="blank" className="mr-6 text-gray-600">
           <TelegramIcon />
         </a>
-        <a href="#!" target="blank" className="mr-6 text-gray-600">
+        <a href="https://www.instagram.com/missionkasonline/" target="blank" className="mr-6 text-gray-600">
           <InstagramIcon />
         </a>
         <a href="https://www.facebook.com/MissionKASonline/" target="blank" className="mr-6 text-gray-600">
@@ -28,7 +28,7 @@ export const SocialHeader = () => {
          <TwitterIcon />
         </a>
         <a href="https://wa.me/918848498679?text=" target="blank" className="text-gray-600">
-          <WhatsAppIcon />
+          <WhatsAppIcon color="black" />
         </a>
       </div>
     </div>

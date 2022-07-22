@@ -8,6 +8,7 @@ import { Register } from "../components/Register";
 import { Footer } from "../components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { WhatsAppIcon } from "../components/icons/WhatsAppIcon";
 
 const Home: NextPage = () => {
   return (
@@ -25,6 +26,12 @@ const Home: NextPage = () => {
         <Programs />
         <Register />
         <Footer />
+
+        <div className="fixed z-50 bottom-3 right-2">
+          <button className="flex items-center justify-center w-12 h-12 p-0 transition duration-200 ease-in border border-white rounded-full shadow-2xl bg-emerald-600 hover:bg-emerald-700 active:shadow-lg mouse focus:outline-none">
+            <WhatsAppIcon color="white" />
+          </button>
+        </div>
       </div>
       <ToastContainer />
     </>

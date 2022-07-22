@@ -43,18 +43,29 @@ export function InfoRadio(props: InfoRadioProps) {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute z-20 w-full mt-3 transform -translate-x-1/2 bottom-14 left-1/2">
-          <div className="w-full rounded-md shadow-xl">
-            <RadioGroup value={value} onChange={onChange} id={id} name={name}>
-              <RadioGroup.Label className="sr-only">
-                KAS stream
-              </RadioGroup.Label>
-              <div>
-                {options.map((option, index) => (
-                  <RadioGroup.Option
-                    key={option.name}
-                    value={option.name}
-                    className={({ active, checked }) =>
-                      `
+          {({ close }) => (
+            <div className="w-full rounded-md shadow-xl">
+              <RadioGroup
+                value={value}
+                onChange={(e: string) => {
+                  onChange(e);
+                  setTimeout(() => {
+                    close();
+                  }, 200);
+                }}
+                id={id}
+                name={name}
+              >
+                <RadioGroup.Label className="sr-only">
+                  KAS stream
+                </RadioGroup.Label>
+                <div>
+                  {options.map((option, index) => (
+                    <RadioGroup.Option
+                      key={option.name}
+                      value={option.name}
+                      className={({ active, checked }) =>
+                        `
                     ${
                       active || checked
                         ? "bg-gradient-to-tr from-emerald-500 to-teal-500 text-white"
@@ -64,44 +75,47 @@ export function InfoRadio(props: InfoRadioProps) {
                     ${index === options.length - 1 ? "rounded-b-md" : ""}
                      border border-b-2 flex cursor-pointer px-5 py-4 shadow-md focus:outline-none
                     `
-                    }
-                  >
-                    {({ checked }) => (
-                      <>
-                        <div className="flex items-center justify-between w-full">
-                          <div className="flex items-center">
-                            <div className="text-sm">
-                              <RadioGroup.Label
-                                as="p"
-                                className={`font-medium text-base  ${
-                                  checked ? "text-white" : "text-gray-900"
-                                }`}
-                              >
-                                {option.name}
-                              </RadioGroup.Label>
-                              <RadioGroup.Description
-                                as="span"
-                                className={`inline ${
-                                  checked ? "text-emerald-100" : "text-gray-500"
-                                }`}
-                              >
-                                {option.description}
-                              </RadioGroup.Description>
+                      }
+                    >
+                      {({ checked }) => (
+                        <>
+                          <div className="flex items-center justify-between w-full">
+                            <div className="flex items-center">
+                              <div className="text-sm">
+                                <RadioGroup.Label
+                                  as="p"
+                                  className={`font-medium text-base  ${
+                                    checked ? "text-white" : "text-gray-900"
+                                  }`}
+                                >
+                                  {option.name}
+                                </RadioGroup.Label>
+                                <RadioGroup.Description
+                                  as="span"
+                                  className={`inline ${
+                                    checked
+                                      ? "text-emerald-100"
+                                      : "text-gray-500"
+                                  }`}
+                                >
+                                  {option.description}
+                                </RadioGroup.Description>
+                              </div>
                             </div>
+                            {checked && (
+                              <div className="text-white shrink-0">
+                                <CheckIcon className="w-6 h-6" />
+                              </div>
+                            )}
                           </div>
-                          {checked && (
-                            <div className="text-white shrink-0">
-                              <CheckIcon className="w-6 h-6" />
-                            </div>
-                          )}
-                        </div>
-                      </>
-                    )}
-                  </RadioGroup.Option>
-                ))}
-              </div>
-            </RadioGroup>
-          </div>
+                        </>
+                      )}
+                    </RadioGroup.Option>
+                  ))}
+                </div>
+              </RadioGroup>
+            </div>
+          )}
         </Popover.Panel>
       </Transition>
     </Popover>
