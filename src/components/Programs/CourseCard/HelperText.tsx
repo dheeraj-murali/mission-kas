@@ -1,4 +1,4 @@
-import { QuestionMarkCircleIcon } from "@heroicons/react/outline";
+import { QuestionIcon } from "../../icons/QuestionIcon";
 
 type HelperTextProps = {
   text: string;
@@ -13,7 +13,7 @@ export const HelperText = (props: HelperTextProps) => {
         href="#"
         className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
       >
-        <QuestionMarkCircleIcon className="w-4 mr-2" />
+        <QuestionIcon />
         {text}
       </a>
     </div>

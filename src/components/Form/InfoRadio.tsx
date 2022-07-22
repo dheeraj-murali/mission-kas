@@ -1,6 +1,6 @@
-import { Fragment, useState } from "react";
 import { Popover, RadioGroup, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/outline";
+import { Fragment } from "react";
+import { ArrowDownIcon } from "../icons/ArrowDownIcon";
 
 export type RadioOption = { name: string; description: string };
 
@@ -29,10 +29,7 @@ export function InfoRadio(props: InfoRadioProps) {
           className={`inline-flex justify-between bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 w-full p-2.5`}
         >
           <span>{value}</span>
-          <ChevronDownIcon
-            className="w-5 h-5 ml-2 text-gray-900 transition duration-150 ease-in-out group-hover:text-opacity-80"
-            aria-hidden="true"
-          />
+          <ArrowDownIcon aria-hidden="true" />
         </Popover.Button>
       </label>
 

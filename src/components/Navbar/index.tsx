@@ -1,12 +1,10 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon } from "../icons/MenuIcon";
 import { Logo } from "../shared/Logo";
-import { NavbarItem } from "./NavbarItem";
-import { NavbarMobile } from "./MovileNavbar";
 import { navigation } from "./data";
-
-
+import { NavbarMobile } from "./MovileNavbar";
+import { NavbarItem } from "./NavbarItem";
 
 export const Navbar = () => {
   return (
@@ -26,8 +24,7 @@ export const Navbar = () => {
             </a>
             <div className="flex items-center -mr-2 md:hidden">
               <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
-                <span className="sr-only">Open main menu</span>
-                <MenuAlt1Icon className="w-6 h-6" aria-hidden="true" />
+                <MenuIcon />
               </Popover.Button>
             </div>
           </div>
@@ -48,7 +45,12 @@ export const Navbar = () => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <NavbarMobile />
+        <Popover.Panel
+          focus
+          className="absolute inset-x-0 top-0 z-50 p-2 transition origin-top-right transform md:hidden"
+        >
+          <NavbarMobile />
+        </Popover.Panel>
       </Transition>
     </Popover>
   );
