@@ -12,22 +12,22 @@ export const SocialHeader = () => {
         <span>Get connected with us on social networks:</span>
       </div>
       <div className="flex justify-center">
-        <a href="https://www.youtube.com/channel/UC9urjbvYBqLWfGFmSrfOlAw" target="blank" className="mr-6 text-gray-600">
+        <a href="https://www.youtube.com/channel/UC9urjbvYBqLWfGFmSrfOlAw" target="blank" rel="noreferrer" className="mr-6 text-gray-600">
          <YoutubeIcon />
         </a>
-        <a href="https://t.me/missionkasonline" target="blank" className="mr-6 text-gray-600">
+        <a href="https://t.me/missionkasonline" target="blank" rel="noreferrer" className="mr-6 text-gray-600">
           <TelegramIcon />
         </a>
-        <a href="https://www.instagram.com/missionkasonline/" target="blank" className="mr-6 text-gray-600">
+        <a href="https://www.instagram.com/missionkasonline/" target="blank" rel="noreferrer" className="mr-6 text-gray-600">
           <InstagramIcon />
         </a>
-        <a href="https://www.facebook.com/MissionKASonline/" target="blank" className="mr-6 text-gray-600">
+        <a href="https://www.facebook.com/MissionKASonline/" target="blank" rel="noreferrer" className="mr-6 text-gray-600">
           <FacebookIcon />
         </a>
-        <a href="https://twitter.com/missionkas" target="blank" className="mr-6 text-gray-600">
+        <a href="https://twitter.com/missionkas" target="blank" rel="noreferrer" className="mr-6 text-gray-600">
          <TwitterIcon />
         </a>
-        <a href="https://wa.me/918848498679?text=" target="blank" className="text-gray-600">
+        <a href="https://wa.me/918848498679?text=" target="blank" rel="noreferrer" className="text-gray-600">
           <WhatsAppIcon color="black" />
         </a>
       </div>

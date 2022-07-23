@@ -27,10 +27,15 @@ const Home: NextPage = () => {
         <Register />
         <Footer />
 
-        <div className="fixed z-50 bottom-3 right-2">
-          <button className="flex items-center justify-center w-12 h-12 p-0 transition duration-200 ease-in border border-white rounded-full shadow-2xl bg-emerald-600 hover:bg-emerald-700 active:shadow-lg mouse focus:outline-none">
+        <div className="fixed z-50 bottom-3 right-2 lg:bottom-5 lg:right-5">
+          <a
+            href="https://wa.me/918848498679?text="
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center justify-center p-2 transition duration-200 ease-in border border-white rounded-full shadow-2xl bg-emerald-600 hover:bg-emerald-700 active:shadow-lg mouse focus:outline-none"
+          >
             <WhatsAppIcon color="white" />
-          </button>
+          </a>
         </div>
       </div>
       <ToastContainer />

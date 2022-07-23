@@ -8,20 +8,20 @@ export const Contact = () => {
       <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
         Contact
       </h6>
-      <p className="grid grid-cols-8 mb-4 md:justify-start">
+      <div className="grid grid-cols-8 mb-4 md:justify-start">
         <AddressIcon />
-        <div className="col-span-7 text-left">
+        <p className="col-span-7 text-left">
           AR building, D-28, D-street, Sasthamangalam, Trivandrum, Kerala 695010
-        </div>
-      </p>
-      <p className="grid grid-cols-8 mb-4 md:justify-start">
+        </p>
+      </div>
+      <div className="grid grid-cols-8 mb-4 md:justify-start">
         <MailIdIcon />
-        <div className="col-span-7 text-left whitespace-pre-wrap">missionkasenquiry@gmail.com</div>
-      </p>
-      <p className="grid grid-cols-8 mb-4 md:justify-start">
+        <p className="col-span-7 text-left whitespace-pre-wrap">missionkasenquiry@gmail.com</p>
+      </div>
+      <div className="grid grid-cols-8 mb-4 md:justify-start">
         <PhoneIcon />
-        <div className="col-span-7 text-left">+91-884-84986798</div>
-      </p>
+        <p className="col-span-7 text-left">+91-884-84986798</p>
+      </div>
     </div>
   );
 };

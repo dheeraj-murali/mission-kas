@@ -1,28 +1,30 @@
+import Link from "next/link";
+
 export const SectionLinks = () => {
   return (
     <div>
-      <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
+      <h3 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
         Useful links
-      </h6>
+      </h3>
       <p className="mb-4">
-        <a href="#home" className="text-gray-600">
+        <Link href="#home" className="text-gray-600">
           Home
-        </a>
+        </Link>
       </p>
       <p className="mb-4">
-        <a href="#about" className="text-gray-600">
+        <Link href="#about" className="text-gray-600">
           About
-        </a>
+        </Link>
       </p>
       <p className="mb-4">
-        <a href="#programs" className="text-gray-600">
+        <Link href="#programs" className="text-gray-600">
           Programs
-        </a>
+        </Link>
       </p>
       <p>
-        <a href="#home" className="text-gray-600">
+        <Link href="#home" className="text-gray-600">
           Register
-        </a>
+        </Link>
       </p>
     </div>
   );
