@@ -1,7 +1,9 @@
 import Image from "next/image";
 import teacher from "../../../public/Images/teacher.jpg";
+import { useLocale } from "../../hooks/useLocale";
 
 export const Highlight = () => {
+  const t = useLocale(['highlight-t', 'highlight-d'])
   return (
     <section
       id="about"
@@ -9,15 +11,10 @@ export const Highlight = () => {
     >
       <div>
         <h2 className="pb-5 text-4xl font-bold tracking-tight">
-          Start your KAS preparation with us
+          {t['highlight-t']}
         </h2>
         <p className="max-w-2xl mt-4 text-gray-500 lg:mx-auto">
-          We have established an environment, where the students have access to
-          all that is required to plan for their KAS examination effectively,
-          efficiently and enthusiastically by ensuring them with excellent
-          coaching and the finest study materials. Facilities at Mission KAS are
-          thoroughly attempted and revised so that our students can focus on
-          what really matters in their journey to crack KAS
+          {t['highlight-d']}
         </p>
       </div>
 

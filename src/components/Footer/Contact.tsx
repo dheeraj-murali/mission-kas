@@ -1,22 +1,33 @@
+import { useLocale } from "../../hooks/useLocale";
 import { AddressIcon } from "../icons/AddressIcon";
 import { MailIdIcon } from "../icons/MailIdIcon";
 import { PhoneIcon } from "../icons/PhoneIcon";
 
 export const Contact = () => {
+  const t = useLocale([
+    "Contact",
+    "AR building, D-28, D-street, Sasthamangalam, Trivandrum, Kerala 695010",
+  ]);
   return (
     <div>
       <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
-        Contact
+        {t["Contact"]}
       </h6>
       <div className="grid grid-cols-8 mb-4 md:justify-start">
         <AddressIcon />
         <p className="col-span-7 text-left">
-          AR building, D-28, D-street, Sasthamangalam, Trivandrum, Kerala 695010
+          {
+            t[
+              "AR building, D-28, D-street, Sasthamangalam, Trivandrum, Kerala 695010"
+            ]
+          }
         </p>
       </div>
       <div className="grid grid-cols-8 mb-4 md:justify-start">
         <MailIdIcon />
-        <p className="col-span-7 text-left whitespace-pre-wrap">missionkasenquiry@gmail.com</p>
+        <p className="col-span-7 text-left whitespace-pre-wrap">
+          missionkasenquiry@gmail.com
+        </p>
       </div>
       <div className="grid grid-cols-8 mb-4 md:justify-start">
         <PhoneIcon />

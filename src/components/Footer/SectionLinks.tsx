@@ -1,29 +1,37 @@
 import Link from "next/link";
+import { useLocale } from "../../hooks/useLocale";
 
 export const SectionLinks = () => {
+  const t = useLocale([
+    "Useful links",
+    "Home",
+    "About",
+    "Programs",
+    "Register",
+  ]);
   return (
     <div>
       <h3 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
-        Useful links
+        {t["Useful links"]}
       </h3>
       <p className="mb-4">
         <Link href="#home" className="text-gray-600">
-          Home
+          {t["Home"]}
         </Link>
       </p>
       <p className="mb-4">
         <Link href="#about" className="text-gray-600">
-          About
+          {t['About']}
         </Link>
       </p>
       <p className="mb-4">
         <Link href="#programs" className="text-gray-600">
-          Programs
+          {t['Programs']}
         </Link>
       </p>
       <p>
         <Link href="#home" className="text-gray-600">
-          Register
+          {t['Register']}
         </Link>
       </p>
     </div>

@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
+import { useLocale } from "../../hooks/useLocale";
 import { MailSendIcon } from "../icons/MailSendIcon";
 import { Button } from "./Button";
 import { streams } from "./data";
@@ -32,8 +33,19 @@ const encode = (data: any) => {
     .join("&");
 };
 
+const words = [
+  "Register now",
+  "Your name",
+  "Email address",
+  "Phone number",
+  "Your preferred stream",
+  "Join us now",
+];
+
 export const Form = (props: FormProps) => {
   const { theme } = props;
+
+  const t = useLocale(words);
 
   const formik = useFormik<FormInputs>({
     initialValues: {
@@ -49,13 +61,15 @@ export const Form = (props: FormProps) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "registration", ...values }),
       })
-        .then(() => toast.success("Well get back to you soon!!", {
-         icon: <MailSendIcon />
-        }))
+        .then(() =>
+          toast.success("Well get back to you soon!!", {
+            icon: <MailSendIcon />,
+          })
+        )
         .catch(() => toast.error("Oh no! something went wrong."))
         .finally(() => {
           formik.setSubmitting(false);
-          formik.resetForm()
+          formik.resetForm();
         });
     },
   });
@@ -68,7 +82,7 @@ export const Form = (props: FormProps) => {
             theme === "light" ? "text-white" : "text-gray-900"
           }`}
         >
-          Register now
+          {t["Register now"]}
         </h2>
         <div className="w-full space-y-8">
           <form
@@ -83,7 +97,7 @@ export const Form = (props: FormProps) => {
               name="name"
               type="text"
               theme={theme}
-              label="Your name"
+              label={t["Your name"]}
               onChange={formik.handleChange}
               value={formik.values.name}
               error={
@@ -97,7 +111,7 @@ export const Form = (props: FormProps) => {
               name="email"
               type="email"
               theme={theme}
-              label="Email address"
+              label={t["Email address"]}
               onChange={formik.handleChange}
               value={formik.values.email}
               error={
@@ -111,7 +125,7 @@ export const Form = (props: FormProps) => {
               name="phone"
               type="tel"
               theme={theme}
-              label="Phone number"
+              label={t["Phone number"]}
               onChange={(e) => {
                 console.log(e);
                 formik.handleChange(e);
@@ -127,7 +141,7 @@ export const Form = (props: FormProps) => {
             <InfoRadio
               name="stream"
               theme={theme}
-              label="Your preferred stream"
+              label={t["Your preferred stream"]}
               onChange={(e) => {
                 formik.setFieldValue("stream", e);
               }}
@@ -136,7 +150,7 @@ export const Form = (props: FormProps) => {
             />
 
             <div>
-              <Button loading={formik.isSubmitting}>Join us now</Button>
+              <Button loading={formik.isSubmitting}>{t['Join us now']}</Button>
             </div>
           </form>
         </div>
