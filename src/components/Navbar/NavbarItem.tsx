@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useLocale } from "../../hooks/useLocale";
 
 type NavbarItemProps = {
   name: string;
@@ -8,6 +9,7 @@ type NavbarItemProps = {
 
 export const NavbarItem = (props: NavbarItemProps) => {
   const { link, name, isMobile } = props;
+  const t = useLocale([name])
 
   return (
     <div
@@ -17,7 +19,7 @@ export const NavbarItem = (props: NavbarItemProps) => {
           : "inline-flex text-white hover:text-emerald-300 hover:border-b-2"
       }`}
     >
-      <Link href={link}>{name}</Link>
+      <Link href={link}>{t[name]}</Link>
     </div>
   );
 };
