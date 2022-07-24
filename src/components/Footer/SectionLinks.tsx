@@ -3,7 +3,7 @@ import { useLocale } from "../../hooks/useLocale";
 
 export const SectionLinks = () => {
   const t = useLocale([
-    "Useful links",
+    "USEFUL LINKS",
     "Home",
     "About",
     "Programs",
@@ -12,7 +12,7 @@ export const SectionLinks = () => {
   return (
     <div>
       <h3 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
-        {t["Useful links"]}
+        {t["USEFUL LINKS"]}
       </h3>
       <p className="mb-4">
         <Link href="#home" className="text-gray-600">

@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { WhatsAppIcon } from "../components/icons/WhatsAppIcon";
 
-const Home: NextPage = () => {
+const App: NextPage = () => {
   return (
     <>
       <div className="text-gray-600">
@@ -43,4 +43,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default App;

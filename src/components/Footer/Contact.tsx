@@ -5,13 +5,13 @@ import { PhoneIcon } from "../icons/PhoneIcon";
 
 export const Contact = () => {
   const t = useLocale([
-    "Contact",
+    "CONTACT",
     "AR building, D-28, D-street, Sasthamangalam, Trivandrum, Kerala 695010",
   ]);
   return (
     <div>
       <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
-        {t["Contact"]}
+        {t["CONTACT"]}
       </h6>
       <div className="grid grid-cols-8 mb-4 md:justify-start">
         <AddressIcon />

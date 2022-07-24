@@ -1,6 +1,8 @@
 import { Popover, Transition } from "@headlessui/react";
+import Link from "next/link";
 import { Fragment } from "react";
 import { MenuIcon } from "../icons/MenuIcon";
+import { LangToggle } from "../shared/LangToggle";
 import { Logo } from "../shared/Logo";
 import { navigation } from "./data";
 import { NavbarMobile } from "./MovileNavbar";
@@ -17,21 +19,27 @@ export const Navbar = () => {
         aria-label="Global"
       >
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-          <div className="flex items-center justify-between w-full md:w-auto">
-            <a href="#">
-              <Logo width={180} height={50} type="light" />
-            </a>
-            <div className="flex items-center -mr-2 md:hidden">
+          <div className="flex items-center justify-between w-full">
+            <div>
+              <Link href="#">
+                <Logo width={180} height={50} type="light" />
+              </Link>
+            </div>
+
+            <div className="flex items-center -mr-2 space-x-3 lg:hidden">
+              <LangToggle />
               <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
                 <MenuIcon />
               </Popover.Button>
             </div>
           </div>
         </div>
-        <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+
+        <div className="hidden lg:block md:ml-10 md:pr-4 md:space-x-8">
           {navigation.map((item, index) => (
             <NavbarItem link={item.href} name={item.name} key={index} />
           ))}
+          <LangToggle />
         </div>
       </nav>
 
@@ -46,7 +54,7 @@ export const Navbar = () => {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 z-50 p-2 transition origin-top-right transform md:hidden"
+          className="absolute inset-x-0 top-0 z-50 p-2 transition origin-top-right transform lg:hidden"
         >
           <NavbarMobile />
         </Popover.Panel>
