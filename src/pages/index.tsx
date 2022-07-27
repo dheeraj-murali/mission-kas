@@ -9,10 +9,14 @@ import { Footer } from "../components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { WhatsAppIcon } from "../components/icons/WhatsAppIcon";
+import Head from "next/head";
 
 const App: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Mission KAS - Start your KAS preparation with us</title>
+      </Head>
       <div className="text-gray-600">
         <main
           id="home"
