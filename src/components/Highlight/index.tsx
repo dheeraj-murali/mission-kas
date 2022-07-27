@@ -18,8 +18,8 @@ export const Highlight = () => {
         </p>
       </div>
 
-      <div className="relative w-full overflow-hidden rounded-md shadow-md md:w-96 h-52 xl:h-72 xl:w-3/4 shadow-black">
-        <Image layout="fill" src={teacher} alt="trainer" />
+      <div className="relative w-full overflow-hidden rounded-md shadow-md md:w-96 h-52 xl:h-96 xl:w-3/4 shadow-black">
+        <Image layout="fill" src={teacher} alt="trainer" height={200} width={400} />
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ export const Features = () => {
             {t["feature-t"]}
           </h2>
           <p className="max-w-2xl my-4 text-xl text-gray-500 lg:mx-auto lg:text-center">
-            {t["feature-t"]}
+            {t["feature-d"]}
           </p>
         </div>
 
