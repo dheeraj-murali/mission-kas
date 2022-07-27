@@ -31,7 +31,7 @@ export const Contact = () => {
       </div>
       <div className="grid grid-cols-8 mb-4 md:justify-start">
         <PhoneIcon />
-        <p className="col-span-7 text-left">+91-884-84986798</p>
+        <p className="col-span-7 text-left">+91-884-8498679</p>
       </div>
     </div>
   );
