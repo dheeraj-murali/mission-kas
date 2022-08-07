@@ -1,5 +1,4 @@
 import { Popover, Transition } from "@headlessui/react";
-import Link from "next/link";
 import { Fragment } from "react";
 import { MenuIcon } from "../icons/MenuIcon";
 import { LangToggle } from "../shared/LangToggle";
@@ -21,14 +20,15 @@ export const Navbar = () => {
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
           <div className="flex items-center justify-between w-full">
             <div>
-              <Link href="#">
-                <Logo width={180} height={50} type="light" />
-              </Link>
+              <Logo width={180} height={50} type="light" />
             </div>
 
             <div className="flex items-center -mr-2 space-x-3 lg:hidden">
               <LangToggle />
-              <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+              <Popover.Button
+                aria-label="Menu"
+                className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
+              >
                 <MenuIcon />
               </Popover.Button>
             </div>

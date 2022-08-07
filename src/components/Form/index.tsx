@@ -93,7 +93,7 @@ export const Form = (props: FormProps) => {
             data-netlify-honeypot="bot-field"
           >
             <Input
-              id="name"
+              id={`name-${theme}`}
               name="name"
               type="text"
               theme={theme}
@@ -107,7 +107,7 @@ export const Form = (props: FormProps) => {
               }
             />
             <Input
-              id="email"
+              id={`email-${theme}`}
               name="email"
               type="email"
               theme={theme}
@@ -121,7 +121,7 @@ export const Form = (props: FormProps) => {
               }
             />
             <Input
-              id="phone"
+              id={`phone-${theme}`}
               name="phone"
               type="tel"
               theme={theme}
@@ -139,6 +139,7 @@ export const Form = (props: FormProps) => {
             />
 
             <InfoRadio
+              id={`stream-${theme}`}
               name="stream"
               theme={theme}
               label={t["Your preferred stream"]}
@@ -150,7 +151,7 @@ export const Form = (props: FormProps) => {
             />
 
             <div>
-              <Button loading={formik.isSubmitting}>{t['Join us now']}</Button>
+              <Button loading={formik.isSubmitting}>{t["Join us now"]}</Button>
             </div>
           </form>
         </div>

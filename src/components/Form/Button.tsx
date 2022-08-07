@@ -13,7 +13,7 @@ export const Button = (props: ButtonProps) => {
     <button
       disabled={loading}
       type="submit"
-      className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-teal-600 border border-transparent rounded-md hover:bg-teal-700 md:py-4 md:text-lg md:px-10"
+      className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-teal-700 border border-transparent rounded-md hover:bg-teal-700 md:py-4 md:text-lg md:px-10"
     >
       {loading ? (
         <span className="mr-3 animate-spin">

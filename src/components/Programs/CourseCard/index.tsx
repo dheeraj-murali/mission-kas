@@ -21,9 +21,9 @@ export const CourseCard = (props: CourseCardProps) => {
 
   return (
     <div className="max-w-md p-4 bg-white border rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
-      <h5 className="mb-3 text-base font-semibold text-gray-900 lg:text-xl dark:text-white">
+      <h3 className="mb-3 text-base font-semibold text-gray-900 lg:text-xl dark:text-white">
         {t[title]}
-      </h5>
+      </h3>
       {subTitle && (
         <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
           {t[subTitle]}

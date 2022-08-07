@@ -20,6 +20,7 @@ export const SocialHeader = () => {
           rel="noreferrer"
           className="mr-6 text-gray-600"
         >
+          <label className="sr-only">Youtube</label>
           <YoutubeIcon />
         </a>
         <a
@@ -28,6 +29,7 @@ export const SocialHeader = () => {
           rel="noreferrer"
           className="mr-6 text-gray-600"
         >
+          <label className="sr-only">Telegram</label>
           <TelegramIcon />
         </a>
         <a
@@ -36,6 +38,7 @@ export const SocialHeader = () => {
           rel="noreferrer"
           className="mr-6 text-gray-600"
         >
+          <label className="sr-only">Instagram</label>
           <InstagramIcon />
         </a>
         <a
@@ -44,6 +47,7 @@ export const SocialHeader = () => {
           rel="noreferrer"
           className="mr-6 text-gray-600"
         >
+          <label className="sr-only">Facebook</label>
           <FacebookIcon />
         </a>
         <a
@@ -52,6 +56,7 @@ export const SocialHeader = () => {
           rel="noreferrer"
           className="mr-6 text-gray-600"
         >
+          <label className="sr-only">Twitter</label>
           <TwitterIcon />
         </a>
         <a
@@ -60,6 +65,7 @@ export const SocialHeader = () => {
           rel="noreferrer"
           className="text-gray-600"
         >
+          <label className="sr-only">WhatsApp</label>
           <WhatsAppIcon color="black" />
         </a>
       </div>

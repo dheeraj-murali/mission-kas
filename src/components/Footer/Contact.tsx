@@ -10,9 +10,9 @@ export const Contact = () => {
   ]);
   return (
     <div>
-      <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
+      <h3 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
         {t["CONTACT"]}
-      </h6>
+      </h3>
       <div className="grid grid-cols-8 mb-4 md:justify-start">
         <AddressIcon />
         <p className="col-span-7 text-left">

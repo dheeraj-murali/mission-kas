@@ -53,6 +53,7 @@ const App: NextPage = () => {
             rel="noreferrer"
             className="flex items-center justify-center p-2 transition duration-200 ease-in border border-white rounded-full shadow-2xl bg-emerald-600 hover:bg-emerald-700 active:shadow-lg mouse focus:outline-none"
           >
+            <label className="sr-only">WhatsApp</label>
             <WhatsAppIcon color="white" />
           </a>
         </div>
